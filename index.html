@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -19,8 +19,21 @@
   </head>
   <body>
     <div class="announcement">
-      <p>ඔබේ දුරකථනයට අවශ්‍ය හැමදේම එකම තැනකින්</p>
-      <a href="#repairs">අලුත්වැඩියා සේවා <span aria-hidden="true">↗</span></a>
+      <div class="container announcement-inner">
+        <div class="announcement-message">
+          <p data-i18n="announcement.headline">ඔබේ දුරකථනයට අවශ්‍ය හැමදේම එකම තැනකින්</p>
+          <a href="#repairs"><span data-i18n="announcement.service">අලුත්වැඩියා සේවා</span> <span aria-hidden="true">↗</span></a>
+        </div>
+        <label class="language-picker">
+          <span aria-hidden="true">◎</span>
+          <span class="sr-only" data-i18n="language.label">භාෂාව තෝරන්න</span>
+          <select id="language-select" aria-label="Select language">
+            <option value="si">සිංහල</option>
+            <option value="en">English</option>
+            <option value="ta">தமிழ்</option>
+          </select>
+        </label>
+      </div>
     </div>
 
     <header class="site-header">
@@ -30,124 +43,124 @@
         </a>
 
         <form class="search" role="search">
-          <label class="sr-only" for="site-search">Search products</label>
+          <label class="sr-only" for="site-search" data-i18n="search.label">Search products</label>
           <span class="search-icon" aria-hidden="true">⌕</span>
-          <input id="site-search" type="search" placeholder="දුරකථන සහ accessories සොයන්න..." />
-          <button type="submit">සොයන්න</button>
+          <input id="site-search" type="search" placeholder="දුරකථන සහ accessories සොයන්න..." data-i18n-placeholder="search.placeholder" />
+          <button type="submit"><span data-i18n="search.submit">සොයන්න</span><span class="search-submit-icon" aria-hidden="true">⌕</span></button>
         </form>
 
         <div class="header-actions">
           <a class="contact-link" href="tel:+94112345678">
             <span class="action-icon" aria-hidden="true">☎</span>
-            <span><small>අපට කතා කරන්න</small><strong>011 234 5678</strong></span>
+            <span><small data-i18n="contact.call">අපට කතා කරන්න</small><strong>011 234 5678</strong></span>
           </a>
-          <button class="cart-button" type="button" aria-label="Shopping cart">
+          <button class="cart-button" type="button" aria-label="Shopping cart" data-i18n-aria-label="cart.label">
             <span aria-hidden="true">♧</span><b>0</b>
           </button>
         </div>
       </div>
-      <nav class="main-nav" aria-label="Main navigation">
+      <nav class="main-nav" aria-label="Main navigation" data-i18n-aria-label="nav.label">
         <div class="container nav-inner">
-          <a class="nav-active" href="#">මුල් පිටුව</a>
-          <a href="#phones">ජංගම දුරකථන</a>
-          <a href="#accessories">Accessories</a>
-          <a href="#repairs">Repair සේවා</a>
-          <a href="#about">අප ගැන</a>
-          <a href="#contact">සම්බන්ධ වන්න</a>
-          <span class="nav-note"><i></i> විශ්වාසයෙන් මිලදී ගන්න</span>
+          <a class="nav-active" href="#" data-i18n="nav.home">මුල් පිටුව</a>
+          <a href="#phones" data-i18n="nav.phones">ජංගම දුරකථන</a>
+          <a href="#accessories" data-i18n="nav.accessories">Accessories</a>
+          <a href="#repairs" data-i18n="nav.repairs">Repair සේවා</a>
+          <a href="#about" data-i18n="nav.about">අප ගැන</a>
+          <a href="#contact" data-i18n="nav.contact">සම්බන්ධ වන්න</a>
+          <span class="nav-note"><i></i> <span data-i18n="nav.note">විශ්වාසයෙන් මිලදී ගන්න</span></span>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="promo-carousel" aria-label="Special offers">
+      <section class="promo-carousel" aria-label="Special offers" data-i18n-aria-label="promo.label">
         <div class="promo-slides"></div>
         <div class="promo-controls" hidden>
-          <button class="promo-arrow promo-previous" type="button" aria-label="පෙර poster එක">‹</button>
-          <div class="promo-dots" aria-label="Poster තෝරන්න"></div>
-          <button class="promo-arrow promo-next" type="button" aria-label="ඊළඟ poster එක">›</button>
+          <button class="promo-arrow promo-previous" type="button" aria-label="පෙර poster එක" data-i18n-aria-label="promo.previous">‹</button>
+          <div class="promo-dots" aria-label="Poster තෝරන්න" data-i18n-aria-label="promo.choose"></div>
+          <button class="promo-arrow promo-next" type="button" aria-label="ඊළඟ poster එක" data-i18n-aria-label="promo.next">›</button>
         </div>
       </section>
 
       <section class="hero container">
         <div class="hero-copy">
-          <span class="eyebrow"><i></i> SKS MOBILE — ඔබේ විශ්වාසවන්ත සහකරු</span>
-          <h1>ඔබේ ලෝකය,<br />එක <span>touch</span> එකකින්.</h1>
-          <p>අලුත්ම smartphones, ගුණාත්මක accessories සහ විශ්වාසවන්ත repair සේවාව — ඔබට අවශ්‍ය හැමදේම එකම තැනකින්.</p>
+          <span class="eyebrow"><i></i> <span data-i18n="hero.kicker">SKS MOBILE — ඔබේ විශ්වාසවන්ත සහකරු</span></span>
+          <h1 data-i18n-html="hero.title">ඔබේ ලෝකය,<br />එක <span>touch</span> එකකින්.</h1>
+          <p data-i18n="hero.description">අලුත්ම smartphones, ගුණාත්මක accessories සහ විශ්වාසවන්ත repair සේවාව — ඔබට අවශ්‍ය හැමදේම එකම තැනකින්.</p>
           <div class="hero-actions">
-            <a class="button button-dark" href="#phones">දුරකථන බලන්න <span aria-hidden="true">→</span></a>
-            <a class="text-link" href="#repairs"><span class="play-icon" aria-hidden="true">▶</span> Repair සේවා</a>
+            <a class="button button-dark" href="#phones"><span data-i18n="hero.browse">දුරකථන බලන්න</span><span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#repairs"><span class="play-icon" aria-hidden="true">▶</span> <span data-i18n="hero.repairs">Repair සේවා</span></a>
           </div>
           <div class="trust-row">
             <div class="avatar-stack" aria-hidden="true"><span>ස</span><span>ක</span><span>ම</span></div>
-            <p><strong>1,200+</strong><br />සතුටුදායක පාරිභෝගිකයින්</p>
+            <p><strong>1,200+</strong><br /><span data-i18n="hero.customers">සතුටුදායක පාරිභෝගිකයින්</span></p>
             <span class="trust-divider"></span>
-            <p class="rating"><strong>★★★★★</strong><br />විශ්වාසදායක සේවාව</p>
+            <p class="rating"><strong>★★★★★</strong><br /><span data-i18n="hero.rating">විශ්වාසදායක සේවාව</span></p>
           </div>
         </div>
-        <div class="hero-visual" aria-label="Featured smartphone">
+        <div class="hero-visual" aria-label="Featured smartphone" data-i18n-aria-label="hero.featured">
           <div class="visual-orbit orbit-one"></div>
           <div class="visual-orbit orbit-two"></div>
-          <div class="hero-badge"><span>අලුත්ම</span><strong>Tech<br />එකතුව</strong><b>2025</b></div>
+          <div class="hero-badge"><span data-i18n="hero.new">අලුත්ම</span><strong data-i18n-html="hero.collection">Tech<br />එකතුව</strong><b>2025</b></div>
           <div class="phone phone-back"><div class="camera camera-a"></div><div class="camera camera-b"></div><div class="camera camera-c"></div><div class="flash"></div></div>
           <div class="phone phone-front"><div class="phone-screen"><div class="screen-glow"></div><span class="screen-time">9:41</span><span class="screen-date">A new way to see things.</span></div><div class="dynamic-island"></div></div>
-          <div class="floating-card"><span class="check-icon">✓</span><span><small>තත්ත්වය සහතිකයි</small><strong>100% genuine</strong></span></div>
+          <div class="floating-card"><span class="check-icon">✓</span><span><small data-i18n="hero.quality">තත්ත්වය සහතිකයි</small><strong data-i18n="hero.genuine">100% genuine</strong></span></div>
           <span class="visual-spark spark-one">✳</span><span class="visual-spark spark-two">✦</span>
         </div>
         <div class="hero-pagination"><span class="pagination-active"></span><span></span><span></span><small>01 <i>/</i> 03</small></div>
       </section>
 
-      <section class="benefits" aria-label="Our benefits">
+      <section class="benefits" aria-label="Our benefits" data-i18n-aria-label="benefits.label">
         <div class="container benefits-inner">
-          <div class="benefit"><span class="benefit-icon">↗</span><span><strong>දිවයින පුරා Delivery</strong><small>ආරක්ෂිතව ඔබේ නිවසටම</small></span></div>
+          <div class="benefit"><span class="benefit-icon">↗</span><span><strong data-i18n="benefits.delivery">දිවයින පුරා Delivery</strong><small data-i18n="benefits.deliveryDetail">ආරක්ෂිතව ඔබේ නිවසටම</small></span></div>
           <span class="benefit-divider"></span>
-          <div class="benefit"><span class="benefit-icon">✓</span><span><strong>විශ්වාසදායක ගුණාත්මකභාවය</strong><small>Original නිෂ්පාදන පමණයි</small></span></div>
+          <div class="benefit"><span class="benefit-icon">✓</span><span><strong data-i18n="benefits.quality">විශ්වාසදායක ගුණාත්මකභාවය</strong><small data-i18n="benefits.qualityDetail">Original නිෂ්පාදන පමණයි</small></span></div>
           <span class="benefit-divider"></span>
-          <div class="benefit"><span class="benefit-icon">⌁</span><span><strong>දක්ෂ Repair සේවාව</strong><small>පළපුරුදු කාර්මික ශිල්පීන්</small></span></div>
+          <div class="benefit"><span class="benefit-icon">⌁</span><span><strong data-i18n="benefits.repair">දක්ෂ Repair සේවාව</strong><small data-i18n="benefits.repairDetail">පළපුරුදු කාර්මික ශිල්පීන්</small></span></div>
           <span class="benefit-divider"></span>
-          <div class="benefit"><span class="benefit-icon">♡</span><span><strong>ඔබ වෙනුවෙන්ම සහාය</strong><small>මිලදී ගැනීමෙන් පසුවත්</small></span></div>
+          <div class="benefit"><span class="benefit-icon">♡</span><span><strong data-i18n="benefits.support">ඔබ වෙනුවෙන්ම සහාය</strong><small data-i18n="benefits.supportDetail">මිලදී ගැනීමෙන් පසුවත්</small></span></div>
         </div>
       </section>
 
       <section class="categories section container" id="accessories">
         <div class="section-heading">
-          <div><span class="eyebrow">ඔබට අවශ්‍ය දේ තෝරන්න</span><h2>අපේ <span>එකතුව</span></h2></div>
-          <a class="text-link" href="#phones">සියල්ල බලන්න <span aria-hidden="true">→</span></a>
+          <div><span class="eyebrow" data-i18n="categories.kicker">ඔබට අවශ්‍ය දේ තෝරන්න</span><h2 data-i18n-html="categories.title">අපේ <span>එකතුව</span></h2></div>
+          <a class="text-link" href="#phones"><span data-i18n="categories.viewAll">සියල්ල බලන්න</span> <span aria-hidden="true">→</span></a>
         </div>
         <div class="category-grid">
           <a class="category-card category-phones" id="phones" href="#products">
             <span class="category-index">01 / DEVICES</span><div class="category-art art-phone"><span></span><i></i></div>
-            <div class="category-info"><div><h3>Smartphones</h3><p>අලුත්ම models රැසක්</p></div><span class="round-arrow">↗</span></div>
+            <div class="category-info"><div><h3 data-i18n="categories.phones">Smartphones</h3><p data-i18n="categories.phonesDetail">අලුත්ම models රැසක්</p></div><span class="round-arrow">↗</span></div>
           </a>
           <a class="category-card category-audio" href="#products">
             <span class="category-index">02 / AUDIO</span><div class="category-art art-audio"><span></span><i></i></div>
-            <div class="category-info"><div><h3>Audio & Earbuds</h3><p>ඔබේ රිද්මයට ගැළපෙන්න</p></div><span class="round-arrow">↗</span></div>
+            <div class="category-info"><div><h3 data-i18n="categories.audio">Audio & Earbuds</h3><p data-i18n="categories.audioDetail">ඔබේ රිද්මයට ගැළපෙන්න</p></div><span class="round-arrow">↗</span></div>
           </a>
           <a class="category-card category-accessories" href="#products">
             <span class="category-index">03 / ACCESSORIES</span><div class="category-art art-accessory"><span></span><i></i><b></b></div>
-            <div class="category-info"><div><h3>Accessories</h3><p>දිනපතා භාවිතයට තවත් දේ</p></div><span class="round-arrow">↗</span></div>
+            <div class="category-info"><div><h3 data-i18n="categories.accessories">Accessories</h3><p data-i18n="categories.accessoriesDetail">දිනපතා භාවිතයට තවත් දේ</p></div><span class="round-arrow">↗</span></div>
           </a>
           <a class="category-card category-repair" id="repairs" href="#contact">
             <span class="category-index">04 / REPAIR</span><div class="category-art art-repair"><span>＋</span><i>⌕</i></div>
-            <div class="category-info"><div><h3>Repair සේවා</h3><p>ඉක්මන්, විශ්වාසදායක අලුත්වැඩියා</p></div><span class="round-arrow">↗</span></div>
+            <div class="category-info"><div><h3 data-i18n="categories.repair">Repair සේවා</h3><p data-i18n="categories.repairDetail">ඉක්මන්, විශ්වාසදායක අලුත්වැඩියා</p></div><span class="round-arrow">↗</span></div>
           </a>
         </div>
       </section>
 
       <section class="featured container" id="products">
-        <div class="featured-copy"><span class="eyebrow">ඔබේ හොඳම තේරීම</span><h2>හොඳ tech එකක්,<br /><span>හොඳ මිලකට.</span></h2><p>ඔබේ අවශ්‍යතාවයට ගැළපෙන දුරකථනය තෝරාගන්න. අපේ කණ්ඩායම ඔබට උදව් කරන්න සූදානම්.</p><a class="button button-light" href="#contact">අපෙන් විමසන්න <span aria-hidden="true">→</span></a></div>
+        <div class="featured-copy"><span class="eyebrow" data-i18n="featured.kicker">ඔබේ හොඳම තේරීම</span><h2 data-i18n-html="featured.title">හොඳ tech එකක්,<br /><span>හොඳ මිලකට.</span></h2><p data-i18n="featured.description">ඔබේ අවශ්‍යතාවයට ගැළපෙන දුරකථනය තෝරාගන්න. අපේ කණ්ඩායම ඔබට උදව් කරන්න සූදානම්.</p><a class="button button-light" href="#contact"><span data-i18n="featured.action">අපෙන් විමසන්න</span> <span aria-hidden="true">→</span></a></div>
         <div class="featured-device" aria-hidden="true"><div class="device-glow"></div><div class="promo-phone"><span></span><i></i><b></b></div><div class="promo-spec">PRO<br /><small>CAMERA</small></div><div class="promo-spark">✳</div></div>
-        <div class="featured-foot"><span>01 — NEW ARRIVALS</span><span>ඔබේ ඊළඟ upgrade එක මෙතැනින්.</span></div>
+        <div class="featured-foot"><span data-i18n="featured.tag">01 — NEW ARRIVALS</span><span data-i18n="featured.footer">ඔබේ ඊළඟ upgrade එක මෙතැනින්.</span></div>
       </section>
 
       <section class="contact-strip container" id="contact">
-        <div><span class="eyebrow">අපි උදව් කරන්න සූදානම්</span><h2>ඔබට හොයන දේ හමුවුණේ නැද්ද?</h2><p>අපේ කණ්ඩායමට කතා කරන්න — ඔබට ගැළපෙන හොඳම විසඳුම සොයා දෙන්නම්.</p></div>
-        <a class="button button-dark" href="tel:+94112345678">අපට කතා කරන්න <span aria-hidden="true">→</span></a>
+        <div><span class="eyebrow" data-i18n="contact.kicker">අපි උදව් කරන්න සූදානම්</span><h2 data-i18n="contact.title">ඔබට හොයන දේ හමුවුණේ නැද්ද?</h2><p data-i18n="contact.description">අපේ කණ්ඩායමට කතා කරන්න — ඔබට ගැළපෙන හොඳම විසඳුම සොයා දෙන්නම්.</p></div>
+        <a class="button button-dark" href="tel:+94112345678"><span data-i18n="contact.action">අපට කතා කරන්න</span> <span aria-hidden="true">→</span></a>
       </section>
     </main>
 
     <footer id="about">
-      <div class="container footer-inner"><a class="brand footer-brand" href="#" aria-label="SKS Mobile home"><img class="brand-logo" src="assets/sks-mobile-logo.png" alt="SKS Mobile" /></a><p>ඔබේ mobile ලෝකයට අවශ්‍ය හැමදේම.<br />විශ්වාසයෙන්, එකම තැනකින්.</p><span class="copyright">© 2025 SKS Mobile. සියලු හිමිකම් ඇවිරිණි.</span></div>
+      <div class="container footer-inner"><a class="brand footer-brand" href="#" aria-label="SKS Mobile home"><img class="brand-logo" src="assets/sks-mobile-logo.png" alt="SKS Mobile" /></a><p data-i18n-html="footer.description">ඔබේ mobile ලෝකයට අවශ්‍ය හැමදේම.<br />විශ්වාසයෙන්, එකම තැනකින්.</p><span class="copyright" data-i18n="footer.copyright">© 2025 SKS Mobile. සියලු හිමිකම් ඇවිරිණි.</span></div>
     </footer>
     <div class="toast" role="status" aria-live="polite"></div>
   </body>
