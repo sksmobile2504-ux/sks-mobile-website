@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="si">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SKS Mobile - smartphones, accessories and reliable mobile phone repairs."
+    />
+    <title>SKS Mobile | Phones, Accessories & Repairs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      <p>ඔබේ දුරකථනයට අවශ්‍ය හැමදේම එකම තැනකින්</p>
+      <a href="#repairs">අලුත්වැඩියා සේවා <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <header class="site-header">
+      <div class="header-main container">
+        <a class="brand" href="#" aria-label="SKS Mobile home">
+          <img class="brand-logo" src="assets/sks-mobile-logo.png" alt="SKS Mobile" />
+        </a>
+
+        <form class="search" role="search">
+          <label class="sr-only" for="site-search">Search products</label>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="site-search" type="search" placeholder="දුරකථන සහ accessories සොයන්න..." />
+          <button type="submit">සොයන්න</button>
+        </form>
+
+        <div class="header-actions">
+          <a class="contact-link" href="tel:+94112345678">
+            <span class="action-icon" aria-hidden="true">☎</span>
+            <span><small>අපට කතා කරන්න</small><strong>011 234 5678</strong></span>
+          </a>
+          <button class="cart-button" type="button" aria-label="Shopping cart">
+            <span aria-hidden="true">♧</span><b>0</b>
+          </button>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <div class="container nav-inner">
+          <a class="nav-active" href="#">මුල් පිටුව</a>
+          <a href="#phones">ජංගම දුරකථන</a>
+          <a href="#accessories">Accessories</a>
+          <a href="#repairs">Repair සේවා</a>
+          <a href="#about">අප ගැන</a>
+          <a href="#contact">සම්බන්ධ වන්න</a>
+          <span class="nav-note"><i></i> විශ්වාසයෙන් මිලදී ගන්න</span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="promo-carousel" aria-label="Special offers">
+        <div class="promo-slides"></div>
+        <div class="promo-controls" hidden>
+          <button class="promo-arrow promo-previous" type="button" aria-label="පෙර poster එක">‹</button>
+          <div class="promo-dots" aria-label="Poster තෝරන්න"></div>
+          <button class="promo-arrow promo-next" type="button" aria-label="ඊළඟ poster එක">›</button>
+        </div>
+      </section>
+
+      <section class="hero container">
+        <div class="hero-copy">
+          <span class="eyebrow"><i></i> SKS MOBILE — ඔබේ විශ්වාසවන්ත සහකරු</span>
+          <h1>ඔබේ ලෝකය,<br />එක <span>touch</span> එකකින්.</h1>
+          <p>අලුත්ම smartphones, ගුණාත්මක accessories සහ විශ්වාසවන්ත repair සේවාව — ඔබට අවශ්‍ය හැමදේම එකම තැනකින්.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#phones">දුරකථන බලන්න <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#repairs"><span class="play-icon" aria-hidden="true">▶</span> Repair සේවා</a>
+          </div>
+          <div class="trust-row">
+            <div class="avatar-stack" aria-hidden="true"><span>ස</span><span>ක</span><span>ම</span></div>
+            <p><strong>1,200+</strong><br />සතුටුදායක පාරිභෝගිකයින්</p>
+            <span class="trust-divider"></span>
+            <p class="rating"><strong>★★★★★</strong><br />විශ්වාසදායක සේවාව</p>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Featured smartphone">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+          <div class="hero-badge"><span>අලුත්ම</span><strong>Tech<br />එකතුව</strong><b>2025</b></div>
+          <div class="phone phone-back"><div class="camera camera-a"></div><div class="camera camera-b"></div><div class="camera camera-c"></div><div class="flash"></div></div>
+          <div class="phone phone-front"><div class="phone-screen"><div class="screen-glow"></div><span class="screen-time">9:41</span><span class="screen-date">A new way to see things.</span></div><div class="dynamic-island"></div></div>
+          <div class="floating-card"><span class="check-icon">✓</span><span><small>තත්ත්වය සහතිකයි</small><strong>100% genuine</strong></span></div>
+          <span class="visual-spark spark-one">✳</span><span class="visual-spark spark-two">✦</span>
+        </div>
+        <div class="hero-pagination"><span class="pagination-active"></span><span></span><span></span><small>01 <i>/</i> 03</small></div>
+      </section>
+
+      <section class="benefits" aria-label="Our benefits">
+        <div class="container benefits-inner">
+          <div class="benefit"><span class="benefit-icon">↗</span><span><strong>දිවයින පුරා Delivery</strong><small>ආරක්ෂිතව ඔබේ නිවසටම</small></span></div>
+          <span class="benefit-divider"></span>
+          <div class="benefit"><span class="benefit-icon">✓</span><span><strong>විශ්වාසදායක ගුණාත්මකභාවය</strong><small>Original නිෂ්පාදන පමණයි</small></span></div>
+          <span class="benefit-divider"></span>
+          <div class="benefit"><span class="benefit-icon">⌁</span><span><strong>දක්ෂ Repair සේවාව</strong><small>පළපුරුදු කාර්මික ශිල්පීන්</small></span></div>
+          <span class="benefit-divider"></span>
+          <div class="benefit"><span class="benefit-icon">♡</span><span><strong>ඔබ වෙනුවෙන්ම සහාය</strong><small>මිලදී ගැනීමෙන් පසුවත්</small></span></div>
+        </div>
+      </section>
+
+      <section class="categories section container" id="accessories">
+        <div class="section-heading">
+          <div><span class="eyebrow">ඔබට අවශ්‍ය දේ තෝරන්න</span><h2>අපේ <span>එකතුව</span></h2></div>
+          <a class="text-link" href="#phones">සියල්ල බලන්න <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="category-grid">
+          <a class="category-card category-phones" id="phones" href="#products">
+            <span class="category-index">01 / DEVICES</span><div class="category-art art-phone"><span></span><i></i></div>
+            <div class="category-info"><div><h3>Smartphones</h3><p>අලුත්ම models රැසක්</p></div><span class="round-arrow">↗</span></div>
+          </a>
+          <a class="category-card category-audio" href="#products">
+            <span class="category-index">02 / AUDIO</span><div class="category-art art-audio"><span></span><i></i></div>
+            <div class="category-info"><div><h3>Audio & Earbuds</h3><p>ඔබේ රිද්මයට ගැළපෙන්න</p></div><span class="round-arrow">↗</span></div>
+          </a>
+          <a class="category-card category-accessories" href="#products">
+            <span class="category-index">03 / ACCESSORIES</span><div class="category-art art-accessory"><span></span><i></i><b></b></div>
+            <div class="category-info"><div><h3>Accessories</h3><p>දිනපතා භාවිතයට තවත් දේ</p></div><span class="round-arrow">↗</span></div>
+          </a>
+          <a class="category-card category-repair" id="repairs" href="#contact">
+            <span class="category-index">04 / REPAIR</span><div class="category-art art-repair"><span>＋</span><i>⌕</i></div>
+            <div class="category-info"><div><h3>Repair සේවා</h3><p>ඉක්මන්, විශ්වාසදායක අලුත්වැඩියා</p></div><span class="round-arrow">↗</span></div>
+          </a>
+        </div>
+      </section>
+
+      <section class="featured container" id="products">
+        <div class="featured-copy"><span class="eyebrow">ඔබේ හොඳම තේරීම</span><h2>හොඳ tech එකක්,<br /><span>හොඳ මිලකට.</span></h2><p>ඔබේ අවශ්‍යතාවයට ගැළපෙන දුරකථනය තෝරාගන්න. අපේ කණ්ඩායම ඔබට උදව් කරන්න සූදානම්.</p><a class="button button-light" href="#contact">අපෙන් විමසන්න <span aria-hidden="true">→</span></a></div>
+        <div class="featured-device" aria-hidden="true"><div class="device-glow"></div><div class="promo-phone"><span></span><i></i><b></b></div><div class="promo-spec">PRO<br /><small>CAMERA</small></div><div class="promo-spark">✳</div></div>
+        <div class="featured-foot"><span>01 — NEW ARRIVALS</span><span>ඔබේ ඊළඟ upgrade එක මෙතැනින්.</span></div>
+      </section>
+
+      <section class="contact-strip container" id="contact">
+        <div><span class="eyebrow">අපි උදව් කරන්න සූදානම්</span><h2>ඔබට හොයන දේ හමුවුණේ නැද්ද?</h2><p>අපේ කණ්ඩායමට කතා කරන්න — ඔබට ගැළපෙන හොඳම විසඳුම සොයා දෙන්නම්.</p></div>
+        <a class="button button-dark" href="tel:+94112345678">අපට කතා කරන්න <span aria-hidden="true">→</span></a>
+      </section>
+    </main>
+
+    <footer id="about">
+      <div class="container footer-inner"><a class="brand footer-brand" href="#" aria-label="SKS Mobile home"><img class="brand-logo" src="assets/sks-mobile-logo.png" alt="SKS Mobile" /></a><p>ඔබේ mobile ලෝකයට අවශ්‍ය හැමදේම.<br />විශ්වාසයෙන්, එකම තැනකින්.</p><span class="copyright">© 2025 SKS Mobile. සියලු හිමිකම් ඇවිරිණි.</span></div>
+    </footer>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
