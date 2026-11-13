@@ -61,6 +61,13 @@ const translations = {
     "categories.accessoriesDetail": "දිනපතා භාවිතයට තවත් දේ",
     "categories.repair": "Repair සේවා",
     "categories.repairDetail": "ඉක්මන්, විශ්වාසදායක අලුත්වැඩියා",
+    "products.kicker": "දැන් ලබාගත හැක",
+    "products.title": "ජංගම දුරකථන <span>එකතුව</span>",
+    "products.delivery": "Delivery ලබාගත හැක",
+    "products.ram": "RAM",
+    "products.storage": "Storage",
+    "products.inquire": "මිල සහ විස්තර විමසන්න",
+    "products.infinixAlt": "Infinix Smart 20 ජංගම දුරකථනය",
     "featured.kicker": "ඔබේ හොඳම තේරීම",
     "featured.title": "හොඳ tech එකක්,<br /><span>හොඳ මිලකට.</span>",
     "featured.description": "ඔබේ අවශ්‍යතාවයට ගැළපෙන දුරකථනය තෝරාගන්න. අපේ කණ්ඩායම ඔබට උදව් කරන්න සූදානම්.",
@@ -133,6 +140,13 @@ const translations = {
     "categories.accessoriesDetail": "Everyday essentials",
     "categories.repair": "Repair services",
     "categories.repairDetail": "Fast, reliable phone repairs",
+    "products.kicker": "Available now",
+    "products.title": "Mobile phone <span>collection</span>",
+    "products.delivery": "Delivery available",
+    "products.ram": "RAM",
+    "products.storage": "Storage",
+    "products.inquire": "Ask for price & details",
+    "products.infinixAlt": "Infinix Smart 20 mobile phone",
     "featured.kicker": "A smart choice for you",
     "featured.title": "Great technology,<br /><span>at a great price.</span>",
     "featured.description": "Choose a phone that fits your needs. Our team is ready to help you find the right one.",
@@ -205,6 +219,13 @@ const translations = {
     "categories.accessoriesDetail": "தினசரி பயன்பாட்டிற்கு",
     "categories.repair": "பழுதுபார்ப்பு சேவைகள்",
     "categories.repairDetail": "விரைவான, நம்பகமான பழுதுபார்ப்பு",
+    "products.kicker": "இப்போது கிடைக்கும்",
+    "products.title": "கைபேசிகள் <span>தொகுப்பு</span>",
+    "products.delivery": "விநியோகம் கிடைக்கும்",
+    "products.ram": "RAM",
+    "products.storage": "சேமிப்பு",
+    "products.inquire": "விலை மற்றும் விவரங்களைக் கேளுங்கள்",
+    "products.infinixAlt": "Infinix Smart 20 கைபேசி",
     "featured.kicker": "உங்களுக்கான சிறந்த தேர்வு",
     "featured.title": "சிறந்த தொழில்நுட்பம்,<br /><span>சிறந்த விலையில்.</span>",
     "featured.description": "உங்கள் தேவைக்கு ஏற்ற கைபேசியைத் தேர்ந்தெடுங்கள். சரியானதைத் தேர்வு செய்ய எங்கள் குழு உதவும்.",
@@ -262,6 +283,9 @@ function updateLanguage(language) {
   });
   document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
     element.placeholder = translate(element.dataset.i18nPlaceholder);
+  });
+  document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+    element.alt = translate(element.dataset.i18nAlt);
   });
   document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
     element.setAttribute("aria-label", translate(element.dataset.i18nAriaLabel));
